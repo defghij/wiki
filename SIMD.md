@@ -41,7 +41,7 @@ c_{m-1}
 \end{bmatrix}
 ```
 
-This requires only "one" addition. Here, the value $m$ is the vector width or the number of elements that a vector can hold. Modern processors have vector instructions that allow one to conduct such operations over vectors. These, in C, are exposed via compiler [intrinsics](#Intrinsics). The current vector instruction sets are AVX2, AVX512, SSE, SSE2.
+This requires only "one" addition. Here, the value $m$ is the vector width or the number of elements that a vector can hold. Modern processors have vector instructions that allow one to conduct such operations over vectors. These, in C, are exposed via compiler [intrinsics](#intrinsics). The current vector instruction sets are AVX2, AVX512, SSE, SSE2.
 
 The warps in a GPU are a type of SIMD parallelism. Each thread in a warp executes the same instruction however, they may be operating over different data. Commonly, this the thread id is used to index into memory so that each thread operates at a different offset. 
 
