@@ -9,7 +9,7 @@
 # What is SIMD?
 SIMD stands for Single Instruction Multiple Data. This can be viewed doing the same operation over different data. I like to think of this as vector math. Suppose we have two arrays: $A = [a_{0}, a_{1}, ..., a_{n-1}]$ and $B = [b_{0}, b_{1}, ..., b_{n-1}]$. If we wanted to add each element pair-wise we could use the following for-loop (in C)
 
-```
+```C
 int C = {0};
 for (int i =0; i < n; ++i) {
   C[i] = A[i] + B[i];
@@ -18,28 +18,28 @@ for (int i =0; i < n; ++i) {
 
 This would work but it would take $n$ additions and compares. What we'd like to be able to do is add some number of them together all at once. Perhaps like:
 
-$$
-\begin{pmatrix}
+```math
+\begin{bmatrix}
 a_{0} \\
 a_{1} \\
 \vdots
 a_{m-1}
-\end{pmatrix}
+\end{bmatrix}
 +
-\begin{pmatrix}
+\begin{bmatrix}
 b_{0} \\
 b_{1} \\
 \vdots
 b_{m-1}
-\end{pmatrix}
+\end{bmatrix}
 = 
-\begin{pmatrix}
+\begin{bmatrix}
 c_{0} \\
 c_{1} \\
 \vdots
 c_{m-1}
-\end{pmatrix}
-$$
+\end{bmatrix}
+```
 
 This requires only "one" addition. Here, the value $m$ is the vector width or the number of elements that a vector can hold. 
 
