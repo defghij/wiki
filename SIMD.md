@@ -20,23 +20,23 @@ This would work but it would take $n$ additions and compares. What we'd like to 
 
 ```math
 \begin{bmatrix}
-a_{0} \\
-a_{1} \\
-\vdots
+a_{0}  \\
+a_{1}  \\
+\vdots \\
 a_{m-1}
 \end{bmatrix}
 +
 \begin{bmatrix}
-b_{0} \\
-b_{1} \\
-\vdots
+b_{0}  \\
+b_{1}  \\
+\vdots \\
 b_{m-1}
 \end{bmatrix}
 = 
 \begin{bmatrix}
-c_{0} \\
-c_{1} \\
-\vdots
+c_{0}  \\
+c_{1}  \\
+\vdots \\
 c_{m-1}
 \end{bmatrix}
 ```
