@@ -1,7 +1,7 @@
 # Contents
 
 - [What is SIMD?](#what-is-simd)
-- [Instrinsics](#instrinsics)
+- [Intrinsics](#intrinsics)
   - [Examples:](#examples)
     - [Memory Geometry Processing](#memory-geometry-processing)
       - [Motivation and Introduction](#motivation-and-introduction)
@@ -46,7 +46,7 @@ This requires only "one" addition. Here, the value $m$ is the vector width or th
 The warps in a GPU are a type of SIMD parallelism. Each thread in a warp executes the same instruction however, they may be operating over different data. Commonly, this the thread id is used to index into memory so that each thread operates at a different offset. 
 
 
-# Instrinsics
+# Intrinsics
 Compilers for C and C++, of Microsoft, Intel, and the GNU Compiler Collection (GCC) implement intrinsics that map directly to the x86 single instruction, multiple data (SIMD) instructions (MMX, Streaming SIMD Extensions (SSE), SSE2, SSE3, SSSE3, SSE4, AVX, AVX2, AVX512, FMA, ...). 
 
 ## Examples:
