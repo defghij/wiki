@@ -9,7 +9,7 @@ Compilers for C and C++, of Microsoft, Intel, and the GNU Compiler Collection (G
 A motivating example is given in a [StackOverflow](https://stackoverflow.com/questions/44984724/whats-the-fastest-stride-3-gather-instruction-sequence) thread where in the original poster wants to go from a 3 stride array of structures ([AOS](https://en.wikipedia.org/wiki/AoS_and_SoA#Array_of_structures)) to a structure of arrays ([SOA](https://en.wikipedia.org/wiki/AoS_and_SoA#Structure_of_arrays)). Specifically, we want to go from:
 
 $$
-vi32\_t *SRC = [R_0, G_0, B_0, R_1, G_1, B_1, ..., R_n_-_1, G_n_-_1, B_n_-_1]
+vi32\_t *SRC = [R_{0}, G_{0}, B_{0}, R_{1}, G_{1}, B_{1}, ..., R_{n-1}, G_{n-1}, B_{n-1}]
 $$
 And want to obtain:
 
@@ -21,7 +21,7 @@ $$
 or in memory as:
 
 $$
-vi32\_t SRC`= [R_0, ..., R_n_-_1, G_0, ...,G_\n_-_1, B_0, ..., B_n_-_1]
+vi32\_t SRC`= [R_0, ..., R_n_-_1, G_0, ...,G_{n-1}, B_0, ..., B_{n-1}]
 $$
 
 Stated another way, we want to do a $SxN$ transpose where the stride $S = 3$ and the SIMD width `N = 8`. Visually, in memory we perform the following operation.
