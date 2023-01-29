@@ -19,26 +19,26 @@ for (int i =0; i < n; ++i) {
 This would work but it would take $n$ additions and compares. What we'd like to be able to do is add some number of them together all at once. Perhaps like:
 
 $$
-\begin{bmatrix}
+\begin{pmatrix}
 a_{0} \\
 a_{1} \\
 \vdots
 a_{m-1}
-\end{bmatrix}
+\end{pmatrix}
 +
-\begin{bmatrix}
+\begin{pmatrix}
 b_{0} \\
 b_{1} \\
 \vdots
 b_{m-1}
-\end{bmatrix}
+\end{pmatrix}
 = 
-\begin{bmatrix}
+\begin{pmatrix}
 c_{0} \\
 c_{1} \\
 \vdots
 c_{m-1}
-\end{bmatrix}
+\end{pmatrix}
 $$
 
 This requires only "one" addition. Here, the value $m$ is the vector width or the number of elements that a vector can hold. 
