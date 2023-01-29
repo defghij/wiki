@@ -23,7 +23,7 @@ $$
 or in memory as:
 
 $$
-\text{vi32 SRC'}= [R_0, ..., R_n{n-1}, G_0, ...,G_{n-1}, B_0, ..., B_{n-1}]
+\text{vi32 \*SRC}\prime = [R_0, ..., R_n{n-1}, G_0, ...,G_{n-1}, B_0, ..., B_{n-1}]
 $$
 
 Stated another way, we want to do a $S \times N$ transpose where the stride $S = 3$ and the SIMD width $N = 8$. Visually, in memory we perform the following operation.
