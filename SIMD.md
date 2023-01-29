@@ -1,3 +1,49 @@
+# Contents
+
+- [What is SIMD?](#what-is-simd)
+- [Instrinsics](#instrinsics)
+  - [Examples:](#examples)
+    - [Memory Geometry Processing](#memory-geometry-processing)
+      - [Motivation and Introduction](#motivation-and-introduction)
+
+# What is SIMD?
+SIMD stands for Single Instruction Multiple Data. This can be viewed doing the same operation over different data. I like to think of this as vector math. Suppose we have two arrays: $A = [a_{0}, a_{1}, ..., a_{n-1}]$ and $B = [b_{0}, b_{1}, ..., b_{n-1}]$. If we wanted to add each element pair-wise we could use the following for-loop (in C)
+
+```
+int C = {0};
+for (int i =0; i < n; ++i) {
+  C[i] = A[i] + B[i];
+}
+```
+
+This would work but it would take $n$ additions and compares. What we'd like to be able to do is add some number of them together all at once. Perhaps like:
+
+$$
+\begin{bmatrix}
+a_{0} \\
+a_{1} \\
+\vdots
+a_{m-1}
+\end{bmatrix}
++
+\begin{bmatrix}
+b_{0} \\
+b_{1} \\
+\vdots
+b_{m-1}
+\end{bmatrix}
+= 
+\begin{bmatrix}
+c_{0} \\
+c_{1} \\
+\vdots
+c_{m-1}
+\end{bmatrix}
+$$
+
+This requires only "one" addition. Here, the value $m$ is the vector width or the number of elements that a vector can hold. 
+
+
 # Instrinsics
 Compilers for C and C++, of Microsoft, Intel, and the GNU Compiler Collection (GCC) implement intrinsics that map directly to the x86 single instruction, multiple data (SIMD) instructions (MMX, Streaming SIMD Extensions (SSE), SSE2, SSE3, SSSE3, SSE4, AVX, AVX2, AVX512, FMA, ...). 
 
@@ -335,4 +381,3 @@ int main(int argc, char ** argv) {
 ## Resources
 - [Intel Intrisics Guide](https://www.intel.com/content/www/us/en/docs/intrinsics-guide/index.html#ig_expand=554,1474,511,502,529&cats=Swizzle)
 - [x86 Instrinsics Cheatsheet](https://db.in.tum.de/~finis/x86-intrin-cheatsheet-v2.2.pdf?lang=en)
--
