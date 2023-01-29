@@ -8,7 +8,7 @@ Compilers for C and C++, of Microsoft, Intel, and the GNU Compiler Collection (G
 #### Motivation and Introduction
 A motivating example is given in a [StackOverflow](https://stackoverflow.com/questions/44984724/whats-the-fastest-stride-3-gather-instruction-sequence) thread where in the original poster wants to go from a 3 stride array of structures ([AOS](https://en.wikipedia.org/wiki/AoS_and_SoA#Array_of_structures)) to a structure of arrays ([SOA](https://en.wikipedia.org/wiki/AoS_and_SoA#Structure_of_arrays)). Specifically, we want to go from:
 
-$$ \text{vi32_}\text{t *SRC} = [R_{0}, G_{0}, B_{0}, R_{1}, G_{1}, B_{1}, ..., R_{n-1}, G_{n-1}, B_{n-1}]  $$
+$$ \text{vi32_t *SRC} = [R_{0}, G_{0}, B_{0}, R_{1}, G_{1}, B_{1}, ..., R_{n-1}, G_{n-1}, B_{n-1}]  $$
 
 And want to obtain:
 
