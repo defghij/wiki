@@ -1,3 +1,5 @@
+[[ toc ]]
+
 # Introduction
 
 This is the root page for course notes from JHU. At the time of writing this introduction I'm pursuing a Master's Degree in Computer Science. This wiki does not include all the course I've taken from JHU. Specifically, is does not include the Prerequisites that I took and the Foundational Courses for the degree. This is because I started this wiki after taking those courses.
@@ -16,7 +18,10 @@ Reading:
   
 _Mutual Exclusion_ is the problem or property that only one entity is allowed in a critical section. I.e. access is mutually exclusive. Necessary properties of mutual exclusion are _deadlock-free_ and _lockout-freedom_. Deadlock-free is defined as an entity that wants to enter a critical section eventually succeeds. If two entities want to enter the critical section then one of them eventually succeeds. Starvation-freedom is the property that if an entity wants to enter the critical section then it will eventually do so. The final property that is useful for mutual exclusion is _waiting_. Waiting is that if two entities desire access to the critical section and one of them get access, the other will wait until the one with access finishes.
 
-The _producer-consumer_ problem is when there are two entities. One entity supplies some resource and another consumes the resource. The problem is coordinating the interaction between the two entities such that the consumer only accesses the resources when the producer has made them available. Additionally, the producing entity will not produce more resource than can be consumed. Notes that mutual exclusion cannot be used for the producer-consumer module as the consumer needs to be free to "check" for the resource as often as desired.
+The _producer-consumer_ problem is when there are two entities. One entity supplies some resource and another consumes the resource. The problem is coordinating the interaction between the two entities such that the consumer only accesses the resources when the producer has made them available. Additionally, the producing entity will not produce more resource than can be consumed. Notes that mutual exclusion cannot be used for the producer-consumer module as the consumer needs to be free to "check" for the resource as often as desired. 
+
+_Amdahl's Law_ captures the idea of how much speed up we can get through single-level parallelization. The maxiumum speedup $S$ that can be acchived by $n$ processors collaborating on some application where $p$ is the fraction of the application that is parallelizable. Amdahl's Law states that the speed up by adding a parellel portion $\frac{p}{n}$ is: $ S = \frac{1}{1 - p + \frac{p}{n}}$. Note that this does not account for different levels of values of parallelization. There is strictly a single sequential portion and single parallelizable prortion. 
+
   
 #### Discussion Board Posts
 
