@@ -90,7 +90,7 @@ __m256 x  = _mm256_shuffle_ps(m03, xy , _MM_SHUFFLE( 2,0,3,0));
 __m256 y  = _mm256_shuffle_ps(yz , xy , _MM_SHUFFLE( 3,1,2,0)); 
 __m256 z  = _mm256_shuffle_ps(yz , m25, _MM_SHUFFLE( 3,0,3,1)); 
 ```
-The first half is just packing the values into three `__mm256` vector registers. Another thing to point out is that the `_MM_SHUFFLE(args)` takes the arguments and and packs them into an 8 bit immediate value. Thus first call to `_MM_SHUFFLE(2,1,3,2);` yields $(2<<6)\quad|\quad(1<<4)\quad|\quad(3<<2)\quad|\quad(2<<0) \rightarrow  0\text{b}b10011110$.
+The first half is just packing the values into three `__mm256` vector registers. Another thing to point out is that the `_MM_SHUFFLE(args)` takes the arguments and and packs them into an 8 bit immediate value. Thus first call to `_MM_SHUFFLE(2,1,3,2);` yields $(2<<6)\quad|\quad(1<<4)\quad|\quad(3<<2)\quad|\quad(2<<0) \rightarrow  0\text{b}10011110$.
 
 First, lets just consider the layout of `m03, m14, & m25`
 
