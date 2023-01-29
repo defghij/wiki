@@ -13,10 +13,11 @@ $$ vi32\_t \*SRC = [R_{0}, G_{0}, B_{0}, R_{1}, G_{1}, B_{1}, ..., R_{n-1}, G_{n
 And want to obtain:
 
 $$
-\begin{align}
+\begin{*align}
 YMM0 &= [R_0, R_1, R_2, R_3, R_4, R_5, R_6, R_7] \\
 YMM1 &= [G_0, G_1, G_2, G_3, G_4, G_5, G_6, G_7] \\
 YMM2 &= [B_0, B_1, B_2, B_3, B_4, B_5, B_6, B_7]
+\end{*align}
 $$
 
 or in memory as:
