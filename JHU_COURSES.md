@@ -1,0 +1,35 @@
+# Introduction
+
+This is the root page for course notes from JHU. At the time of writing this introduction I'm pursuing a Master's Degree in Computer Science. This wiki does not include all the course I've taken from JHU. Specifically, is does not include the Prerequisites that I took and the Foundational Courses for the degree. This is because I started this wiki after taking those courses.
+
+# Courses
+
+## EN.605.616.81.SP23: Multiprocess Architecture & Programming
+
+### Module One
+
+#### Notes:
+
+Reading: 
+  Herlihy, M. & Shavit, N. (2021). The art of multiprocessor programming, 2nd Ed.
+  Chapter 1: Introduction
+  
+_Mutual Exclusion_ is the problem or property that only one entity is allowed in a critical section. I.e. access is mutually exclusive. Necessary properties of mutual exclusion are _deadlock-free_ and _lockout-freedom_. Deadlock-free is defined as an entity that wants to enter a critical section eventually succeeds. If two entities want to enter the critical section then one of them eventually succeeds. Starvation-freedom is the property that if an entity wants to enter the critical section then it will eventually do so. The final property that is useful for mutual exclusion is _waiting_. Waiting is that if two entities desire access to the critical section and one of them get access, the other will wait until the one with access finishes.
+
+The _producer-consumer_ problem is when there are two entities. One entity supplies some resource and another consumes the resource. The problem is coordinating the interaction between the two entities such that the consumer only accesses the resources when the producer has made them available. Additionally, the producing entity will not produce more resource than can be consumed. Notes that mutual exclusion cannot be used for the producer-consumer module as the consumer needs to be free to "check" for the resource as often as desired.
+  
+#### Discussion Board Posts
+
+- What are the differences for the requirements between mutual exclusion mechanisms and producer/consumer mechanisms in parallel computing?
+  - Mutual exclusion is controlled access to some critical section. Mutual exclusion is not necessarily about resources. However, the producer-consumer patter is about exposing resources. In the mutual exclusion pattern we require that if there are some entities that desire access to a resource or critical section then at least one of them succeeds. Note that this means there may be $n-1$ entities that never get access the resource or critical section. That is they "starve". However, in the producer-consumer pattern we have the requirement that any entity that wants to access the resource or critical section then it will succeed. That is if there are $n$ entities that require access to a resource or critical secton then $n$ entites will eventually be granted access.
+  - The most obvious difference is that producer-consumer has the more strict requirement of starvation-free.
+
+- Can we use Amdahl’s law more generically? For example, there is a software that will be executed in a 10-processor computer. The software has 20% of it can only be run in sequential, 30% of it can be run concurrently in 5 processors, and the remaining 50% of it can be run concurrently in all 10 processors. What is the speedup for this execution comparing to a sequential execution?
+  - I was unable to find an extension or generalization of _Amdahl's Law_ that includes different percentages of parallelization across processors as described in the question. However, I was able to find a paper ([Speedup for Multi-Level Parallel Computing](https://www.comp.nus.edu.sg/~hebs/pub/shangjianghips12.pdf) which described an extension to Amdahl's Law that map much better to my experience in parallel computing. That is, it describes an extension to Amdahl's Law that accounts for multi-level parallelism afforded in modern computing environments. Specifically, the mutli-level here refers to process level parallelism combined with thread level parallelism. In distributed computing you may have an application that runs the same process, with shared memory, over some number of nodes. Assume for simplicity that there is one process per node. Then we have processes $p$ equals the number of nodes $n$. For each process we have another level of parellelism at the thread level. That is for each process $p_{i}$, we have $t_{i}$ threads for parallelism at the second level. More accurately, the thread-level parallelism is concurrency and is defined by $\alpha : 0 \leq \alpha \leq 1$. The multi-process portion is parallelization $\beta : 0 \leq \beta \leq 1$. The we have the multi-level speedup as:
+    - $sp(\alpha,\beta,p,t) = sp(i = 1) = \frac{1}{1 - \alpha + \frac{\alpha(1 - \beta + \frac{\beta}{t})}{p}}$
+
+- The asynchrony of processor (or thread) executions is bad for parallel computing. Why is that? Explain your opinions.
+  - The asynvhony of a process or thread execution is bad because it conflict with our intuitions of how source code and the resulting assembly ought to run. Specifically, this affects our intitions of around [sequential consistency](https://www.educative.io/answers/what-is-sequential-consistency-in-distributed-systems). For example, in the case of threads, we may not have insight in to how the operating system will schedule the programs threads. In fact we should program in such a way that we do not rely on thread execution ording. At the processor, the CPU may [reorder memory operations](https://en.wikipedia.org/wiki/Memory_ordering). Such reordering can be, and is done, by the compiler in languages such as C. At the network level, we may do some networ transaction and on large systems there may be no guaranteed delivery ordering. 
+  - The discrepancy between how we think about ordering and the systems we depend on to compile and execute our programs lead to inefficiencies, bugs, and vulnerabilities. 
+  - There are tools to enforce ordering in each of these contexts. In the thread and processer contexts we can use serialized instructions [_serialize](https://www.intel.com/content/www/us/en/develop/documentation/cpp-compiler-developer-guide-and-reference/top/compiler-reference/intrinsics/intrinsics-for-isa-instructions/serialize/serialize-1.html) and [atomic instructions](https://www.ibm.com/docs/en/aix/7.2?topic=services-atomic-operations). In shared memory and networking context we can use function calls such as _quiet_ and _fence_ which enforce different constraints on delivery of network traffic [see: SHMEM 1.5](http://www.openshmem.org/site/sites/default/site_files/openshmem-1.5rc1.pdf).
+
