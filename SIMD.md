@@ -23,7 +23,7 @@ $$
 or in memory as:
 
 $$
-\text{vi32 \*SRC}\prime = [R_0, ..., R_n{n-1}, G_0, ...,G_{n-1}, B_0, ..., B_{n-1}]
+\text{vi32 \*SRC}^{\prime} = [R_0, ..., R_n{n-1}, G_0, ...,G_{n-1}, B_0, ..., B_{n-1}]
 $$
 
 Stated another way, we want to do a $S \times N$ transpose where the stride $S = 3$ and the SIMD width $N = 8$. Visually, in memory we perform the following operation.
@@ -205,7 +205,7 @@ z    := 55553333 55550000 44441111 33332222 22223333 22220000 11111111 00002222
 The following code can be used to demonstrate the above transformation.
 
 ```
-// To compile on AMD Eypc
+// To compile on AMD Epyc
 // gcc -march=core-avx2 -Wall shuffle.c -o shuffle
 
 #include <stdio.h>
@@ -321,18 +321,7 @@ int main(int argc, char ** argv) {
   print_256b(z);
   printf("\n");
 }
-
 ```
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -346,4 +335,4 @@ int main(int argc, char ** argv) {
 ## Resources
 - [Intel Intrisics Guide](https://www.intel.com/content/www/us/en/docs/intrinsics-guide/index.html#ig_expand=554,1474,511,502,529&cats=Swizzle)
 - [x86 Instrinsics Cheatsheet](https://db.in.tum.de/~finis/x86-intrin-cheatsheet-v2.2.pdf?lang=en)
-- -
+-
