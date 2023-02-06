@@ -10,7 +10,7 @@ Food and drink notes from around the world. Section is the country and subsectio
 |-----------------------|------------|--------|--------------------|-------------------------------------------------------|
 | Abby’s bistro         | Restaurant | 8/10   | Baltimore          | Tasty and customizable burgers!                       |
 | Akira Ramen           | Restaurant | 8/10   | Columbia           | The best ramen                                        |
-| Bluebird Cocktail Bar | Cocktails  | 8/10   | Baltimore          |                                                       |
+| Bluebird Cocktail Bar | Cocktails  | 8/10   | Baltimore          | Nice atmosphere; speak-easy vibes. Themed Cocktails.  |
 | Bloom                 | Cocktails  | TBD    | Baltimore          | Haven’t been here but I’ve heard amazing things       |
 | Brookville Farms      | Brewery    | 7/10   | Brookville         | Nice outdoor section and pizza                        |
 | Charm city            | Meadery    | 5/10   | Baltimore          | The enterance was a pain to find                      |
