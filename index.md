@@ -7,5 +7,6 @@ Pages:
 - [Parallel Computing](PARALLEL_COMPUTING.md)
 - [Cryptography](CRYPTOGRAPHY.md)
 - [Johns Hopkins Courses](JHU_COURSES.md)
+- [Entertainment](ENTERTAINMENT.md)
 
 
