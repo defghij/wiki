@@ -22,6 +22,7 @@ Food and drink notes from around the world. Section is the country and subsectio
 | Double zero           | Restaurant | 7/10   | Baltimore          | Fancy vegan pizza                                     |
 | Dutch Courage         | Cocktails  | 7/10   | Baltimore          | Recomend making reservation                           |
 | Facci                 | Restaurant | 7/10   | Laurel             | Italian                                               |
+| Faden Sonnen          | Cocktails  | 7/10   | Baltimore          | Nice ambient mood. Great cocktails                    |
 | Guinness              | Brewery    | 5/10   | Glen Burnie        | Blone is pretty good                                  |
 | Heavy Seas            | Brewery    | 5/10   | Hhalethorpe        | Cutlass is life                                       |
 | Iron Gate             | Restaurant | 9/10   | D.C.               | Mediterranean fusion. Go to Anniversary dinner        |
