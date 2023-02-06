@@ -30,10 +30,10 @@ Food and drink notes from around the world. Section is the country and subsectio
 | Jaleo                 | Restaurant | 9/10   | D.C.               | Fancy Spanish Food. Chef's tasting menu is <3         |
 | Klobys                | Restaurant | 6/10   | Laurel             | BBQ and Pork                                          |
 | Little Spice          | Restaurant | 8/10   | Hanover            | Small Thai place with great tea and food              |
-| Lone Oak              | Brewery    | 6/10   | Olney              | They have a delicious smokey beer and outdoor seciton |
+| Lone Oak              | Brewery    | 7/10   | Olney              | They have a delicious smokey beer and outdoor seciton |
 | Matsu Sushi           | Restaurant | 7/10   | Glen Burnie        | A little hole in the wall with good sushi             |
 | Ministry of brewing   | Brewery    | 7/10   | Baltimore          | Inside a cathedral                                    |
-| Notch8                | Brewery    | TBD    | Annapolis Junction | Small and new in Annapolis Junction                   |
+| Notch8                | Brewery    | 6/10   | Annapolis Junction | Small and new in Annapolis Junction                   |
 | Taverna Madrid        | Restaurant | 9/10   | Columbia           | Fanastic Spanish food.                                |
 | Sapwood Cellars       | Brewery    | 8/10   | Columbia           | Fun experimental drinks                               |
 | Tenth Ward Distillery | Cocktails  | 7/10   | Frederick          | Fredick is a cute little city                         |
