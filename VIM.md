@@ -17,3 +17,5 @@ My current set of plugins are
   - preservim/nerdtree
   - mhinz/vim-startify
   - vimwiki/vimwiki
+
+Current work is trying to get `md-graph` to work with my setup. 
