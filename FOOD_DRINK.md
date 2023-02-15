@@ -1,3 +1,9 @@
+---
+title: Food & Drink
+description: A page where my spouse and I can log and rank our favorite spots.
+---
+
+
 # Introduction
 
 Food and drink notes from around the world. Section is the country and subsection for each provence or state. 

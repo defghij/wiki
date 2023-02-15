@@ -1,3 +1,8 @@
+---
+title: Cryptography
+description: Root page for cryptography related information.
+---
+
 # Contents
 
 - [Introduction](#introduction)

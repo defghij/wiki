@@ -1,3 +1,8 @@
+---
+title: SIMD
+description: A page about single-instruction multiple-data programming. Also known as vector programming.
+---
+
 # Contents
 
 - [What is SIMD?](#what-is-simd)

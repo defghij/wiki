@@ -1,3 +1,8 @@
+---
+title: Vim
+description: A page about my vim setup and journey.
+---
+
 # Plugins
 
 My current set of plugins are

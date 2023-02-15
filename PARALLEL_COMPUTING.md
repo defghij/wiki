@@ -1,3 +1,8 @@
+---
+title: Parallel Computing
+description: A root page related to information and concepts in the broad category of parallel programming.
+---
+
 # Introduction
 
 Parellel computing can take many forms. There is instruction level parallelism, network parallelism, distributed computing, concurrency, etc. This can be generalized.

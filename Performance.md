@@ -1,3 +1,8 @@
+---
+title: Performance
+description: A page dedicated to different metrics and magnitudes of computing systems' performance.
+---
+
 # Memory
 
 | Memory   | Size  | value | exponent |

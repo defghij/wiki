@@ -1,3 +1,8 @@
+---
+title: Benchmarking
+description: Root page for benchmarking related information
+---
+
 # Contents
 
 - [Introduction](#introduction)
