@@ -5,7 +5,7 @@ description: A root page related to information and concepts in the broad catego
 
 # Introduction
 
-Parellel computing can take many forms. There is instruction level parallelism, network parallelism, distributed computing, concurrency, etc. This can be generalized.
+Parallel computing can take many forms. There is instruction level parallelism, network parallelism, distributed computing, concurrency, etc. This can be generalized.
 
 | Type | Instruction | Data     | Example                             |
 |------|-------------|----------|-------------------------------------|
@@ -19,3 +19,17 @@ The above table is known as Flynn's Taxonomy and it was extended at a later date
 - [MISD](MISD.md)
 - [SIMD](SIMD.md)
 - [MIMD](MIMD.md)
+
+## Concurrent and Asynchronous
+
+Concurrent programming is the domain of simultaneous access to memory or resources.
+
+-[Memory Consistency Models: A Tutorial](/home/chuck/wiki/files/papers/MemoryConsistencyModels.pdf)
+-[Hardware Memory Model](/home/chuck/wiki/files/papers/HardwareMemoryModel.pdf)
+-[Programming Languages Memory Model](/home/chuck/wiki/files/papers/ProgrammingLanguagesMemoryModel.pdf)
+-[Updating Go's Memory Model](/home/chuck/wiki/files/papers/UpdatingGoMemoryModel.pdf)
+
+
+## Distributed
+
+## Multi-Process
