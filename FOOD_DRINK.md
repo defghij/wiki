@@ -44,3 +44,12 @@ Food and drink notes from around the world. Section is the country and subsectio
 | Sapwood Cellars       | Brewery    | 8/10   | Columbia           | Fun experimental drinks                               |
 | Tenth Ward Distillery | Cocktails  | 7/10   | Frederick          | Fredick is a cute little city                         |
 | Union brewing         | Brewery    | 5/10   | Baltimore          |                                                       |
+| Water Song            | Restaurant | 8/10   | Baltimore          | The mild Kunming Fried Potatos were great!            |
+
+
+# Spain
+
+## Valencia
+
+| Name                  | Keyword    | Rating | Location           | Notes                                                 |
+|-----------------------|------------|--------|--------------------|-------------------------------------------------------|
